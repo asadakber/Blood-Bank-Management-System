@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card card-1">
+          <img class="logo" width="150" height="50" src="../../../assets/c.png">
+            <div class="card-body">
+                <nav class="navbar nav navbar-expand-lg">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                  
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                          <a class="nav-link link" href="#" style="color:white" routerLink="/home">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#" routerLink="/about">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" routerLink="/donorlist">DONERS LIST</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#" routerLink="/contact">CONTACT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" routerLink="/register">REGISTER</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#" routerLink="/login">LOGIN</a>
+                                </li>
+                      </ul>
+                      <form  class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </nav>
+                  <h6 class="head-1">Home</h6><strong class="head-2"> > Contact</strong>
+                  <h5 class="card-title title">Contact Us</h5>
+                  <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="form">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Your Name <strong class="color">*</strong></label>
+                      <input ngModel name="name" type="text"  class="input form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Your e-mail address <strong class="color">*</strong></label>
+                      <input ngModel #email="ngModel" name="email"  type="email" class=" input form-control" id="exampleInputPassword1" placeholder="Password" email required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Subject <strong class="color">*</strong></label>
+                      <input   ngModel name="subject" type="text" class=" input form-control" id="exampleInputPassword1" placeholder="text" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Message <strong class="color">*</strong></label>
+                      <textarea ngModel name="content" class=" input form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                    </div>
+                    <button (click)="showSuccess()" [disabled]="!f.valid" type="submit" class="btn btn-1 btn-primary">Send Message</button>
+                  </form>
+                    <img class="image" width="250" height="200"  src="../../../assets/5.jpg">
+                    <div style="margin-left:690px;margin-top:180px;">
+                    <agm-map  [latitude]="lat" [longitude]="lng">
+                      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                    </agm-map></div>
+                    <!-- <img class="image-1" width="250" height="200"  src="../../../assets/Bloodbag.gif"> -->
+            <!-- <div class="footer"></div> -->
+            
+          </div>
+          <nav class="navbar nav-1 ">
+              <span class="navbar-brand span h1">@copyRights Created By Muhammed Asad Ali Akbar</span>
+            </nav>
+    </div>
+    
+  </div>
+</div>

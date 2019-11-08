@@ -1,0 +1,145 @@
+.card-1 {
+    width: 1000px;
+    margin-left:-270px;
+    height: 1150px;
+    border-radius: 0px;
+    background-color: white;
+}
+
+.card-2 {
+    margin-left: 600px;
+    margin-top: -215px;
+    height: 215px;
+    background-color: transparent;
+    box-shadow: 1px 1px 10px grey;
+}
+
+.para {
+    color:gray;
+}
+
+
+.nav-1 {
+    background-color: black;
+    width: 1000px;
+    margin-left: -1px;
+    margin-top: -25px;
+}
+
+#carouselExampleInterval {
+    box-shadow: 1px 1px 10px grey;
+}
+
+.card-3 {
+    margin-left: 300px;
+    margin-top: -215px;
+    height: 215px;
+    background-color: transparent;
+    box-shadow: 1px 1px 10px grey;
+
+}
+
+.span {
+    margin-left:300px;
+    font-size: 15px;
+    margin-top:10px;
+    color:white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.carousel-1  {
+    margin-top: 20px;
+}
+
+.logo {
+    margin-left: 30px;
+    margin-top:10px;
+   
+}
+
+.active {
+    box-shadow: 1px 1px 1px grey;
+    border-radius: 5px;
+    background-color: maroon;
+}
+
+.nav{
+    background-color: transparent;
+    text-decoration: none;
+
+}
+
+.dropdown-menu {
+    background-color: white;
+}
+
+ul li a {
+    color: gray;
+    margin-left: 10px;
+}
+
+.card-0 {
+    margin-top:20px;
+    background-color: transparent;
+    box-shadow: 1px 1px 10px grey;
+}
+
+.ct {
+    margin-top:20px;
+    margin-left: 80px;
+    color: grey
+}
+
+
+.ct-1 {
+    margin-left: 330px;
+    margin-top: -258px;
+    position: absolute;
+    color: grey
+}
+
+.ct-2 {
+    margin-left: 690px;
+    margin-top: -258px;
+    position: absolute;
+    color: grey
+}
+
+.text {
+    font-size: 14px;
+    color: gray
+}
+
+.text-1 {
+    font-size: 14px;
+    margin-top:-5px;
+    color: gray
+}
+
+.text-2 {
+    font-size: 14px;
+    margin-top:-10px;
+    color: gray
+}
+
+.cont {
+    margin-left: 35px;
+}
+
+.head {
+    text-align: center;
+    margin-top: 50px;
+    color: grey;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cont-1 {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #131313;
+    height:100px;
+}

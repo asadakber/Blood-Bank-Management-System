@@ -1,0 +1,149 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card card-1">
+          <img class="logo" width="150" height="50" src="../../../assets/c.png">
+            <div class="card-body">
+                <nav class="navbar nav navbar-expand-lg">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                  
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                          <a class="nav-link link" href="#" style="color:maroon"  routerLink="/home">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"  routerLink="/about">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"  routerLink="/donorlist">DONERS LIST</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#"  routerLink="/contact">CONTACT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" routerLink="/register">REGISTER</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#" routerLink="/login">LOGIN</a>
+                                </li>
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </nav>
+                  <h6 class="head-1">Home</h6><strong class="head-2"> > User Account</strong><strong class="head-3"> > User Account</strong>
+            
+                    <img class="image" width="250" height="200"  src="../../../assets/5.jpg">
+                    <img class="image-1" width="250" height="200"  src="../../../assets/Bloodbag.gif">
+                    
+            <!-- <div class="footer"></div> -->
+            <h5 style="margin-top:50px;">User Account</h5>
+            <ul class="nav nav-2 tabs nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Create new account</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Log in</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Request new password</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="form">
+                <input name="$key" #$key="ngModel" [(ngModel)]="authservice.user.$key" type="hidden"  class="input form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter key">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Username <strong class="color">*</strong></label>
+                  <input name="username" #username="ngModel" [(ngModel)]="authservice.user.username" type="text"  class="input form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Email Address <strong class="color">*</strong></label>
+                  <input name="email" #email="ngModel" [(ngModel)]="authservice.user.email"  type="email" class=" input form-control" id="exampleInputPassword1" placeholder="Password" email required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password <strong class="color">*</strong></label>
+                  <input  name="password" #password="ngModel" [(ngModel)]="authservice.user.password"  type="password" class=" input form-control" id="exampleInputPassword1" placeholder="text" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Confirm Password <strong class="color">*</strong></label>
+                  <input  name="ConfirmPassword" #ConfirmPassword="ngModel" [(ngModel)]="authservice.user.ConfirmPassword"  type="password" class=" input form-control" id="exampleInputPassword1" placeholder="text" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Name <strong class="color">*</strong></label>
+                  <input name="name" #name="ngModel" [(ngModel)]="authservice.user.name"  type="text" class=" input form-control" id="exampleInputPassword1" placeholder="text" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Contact Number <strong class="color">*</strong></label>
+                  <input name="contactno" #contactno="ngModel" [(ngModel)]="authservice.user.contactno"   type="number" class=" input form-control" id="exampleInputPassword1" placeholder="text" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Address <strong class="color">*</strong></label>
+                  <textarea  name="address" #address="ngModel" [(ngModel)]="authservice.user.address"  class=" input form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">city<strong class="color">*</strong></label>
+                  <select name="city" #city="ngModel" [(ngModel)]="authservice.user.city" class=" input form-control" id="exampleFormControlSelect1" required>
+                    <option value="karachi">Karachi</option>
+                    <option value="dehli">dehli</option>
+                    <option value="tokyo">tokyo</option>
+                    <option value="shanghai">shanghai</option>
+                    <option value="seoul">seoul</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">state<strong class="color">*</strong></label>
+                  <select name="state" #state="ngModel" [(ngModel)]="authservice.user.state" class="input form-control" id="exampleFormControlSelect1" required>
+                    <option value="sindh">sindh</option>
+                    <option value="punjab">punjab</option>
+                    <option value="balouchistan">balouchistan</option>
+                    <option value="N.W.F.P">N.W.F.P</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">country<strong class="color">*</strong></label>
+                  <select name="country" #country="ngModel" [(ngModel)]="authservice.user.country"  class="input form-control" id="exampleFormControlSelect1" required>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="India">India</option>
+                    <option value="Japan">Japan</option>
+                    <option value="China">China</option>
+                    <option value="Korea">Korea</option>
+                  </select>
+                </div>
+                <button  type="submit" class="btn btn-1 btn-danger">Create an account</button>
+              </form></div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><form [formGroup]="login" (ngSubmit)="onLogin()" class="form">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email Address <strong class="color">*</strong></label>
+                  <input formControlName="email" type="email"  class="input form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password <strong class="color">*</strong></label>
+                  <input formControlName="password"  type="password" class=" input form-control" id="exampleInputPassword1" placeholder="Password" email required>
+                </div>
+                <button  type="submit" class="btn btn-1 btn-danger">Login</button>
+              </form></div>
+              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><form [formGroup]="reset" (ngSubmit)="onReset()" class="form">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email Address <strong class="color">*</strong></label>
+                  <input formControlName="email" type="email"  class="input form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                </div>
+                <button  type="submit" class="btn btn-1 btn-danger">E-mail new password</button>
+              </form></div>
+            </div>
+          </div>
+          <nav class="navbar nav-1 ">
+              <span class="navbar-brand span h1">@copyRights Created By Muhammed Asad Ali Akbar</span>
+            </nav>
+    </div>
+    
+  </div>
+</div>

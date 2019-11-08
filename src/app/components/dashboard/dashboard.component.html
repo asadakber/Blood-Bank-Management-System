@@ -1,0 +1,119 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card card-1">
+          <img class="logo" width="200" height="50" src="../../../assets/b.png">
+            <div class="card-body">
+                <nav class="navbar nav navbar-expand-lg">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                  
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                          <a class="nav-link link" href="#"  routerLink="/home">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"  routerLink="/about">ABOUT US</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         ADD NEW
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Blood Group</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Blood Stock</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Blood Sells</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Doners</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        REPORTS
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Blood Group</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Blood Stock</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Blood Sells</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Doners</a>
+                          </div>
+                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" >MY ACCOUNT</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#" (click)="signout()">LOGOUT</a>
+                                </li>
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </nav>
+                  <h6 class="head-1">Home</h6><strong class="head-2"> > Administrator</strong>
+                
+                        <h5 style="margin-top:50px; position:absolute">Administrator</h5>
+                        <ul class="nav nav-2 tabs nav-tabs" id="myTab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">View</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Edit</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th scope="col">S.no</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">Contact Number</th>
+                                  <th scope="col">Address</th>
+                                  <th scope="col">City</th>
+                                  <th scope="col">State</th>
+                                  <th scope="col">Country</th>
+                                  <th scope="col">Edit</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr *ngFor="let user of userList; let i = index">
+                                  <th scope="row">{{i + 1}}</th>
+                                  <td>{{user.name}}</td>
+                                  <td>{{user.contactno}}</td>
+                                  <td>{{user.address}}</td>
+                                  <td>{{user.city}}</td>
+                                  <td>{{user.state}}</td>
+                                  <td>{{user.country}}</td>
+                                  <td><img width="20" (click)="onUpdate(user)" style="cursor:pointer" src="../../../assets/download.svg" /></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                        </div>
+                    <img class="image" width="250" height="200"  src="../../../assets/5.jpg">
+                    <img class="image-1" width="250" height="200"  src="../../../assets/Bloodbag.gif">
+            <!-- <div class="footer"></div> -->
+            
+          </div>
+          <nav class="navbar nav-1 ">
+              <span class="navbar-brand span h1">@copyRights Created By Muhammed Asad Ali Akbar</span>
+            </nav>
+    </div>
+    
+  </div>
+</div>
